@@ -13,7 +13,7 @@ const shows = [
   `stranger things`,
   `this is us`,
   `timeless`,
-  `the oa`,
+  `the oa`
 ];
 
 const wrapWithTag = (content, tagname) => `<${tagname}>${content}</${tagname}>`;
@@ -24,9 +24,12 @@ const writeTitle = title => {
 };
 
 const uCFirst = sentence => {
-  const words = sentence.split(``);
-  words = words.map(word => word.charAt(0).toUpperCase() + word.slice());
-  return words.join();
+  const words = sentence.split(/\n/);
+  var toUpperCase = [];
+  for (var x = 0; x < words.length; x++) {
+    toUpperCase.push(words[x].charAt(0).toUpperCase() + words[x].slice(1));
+  }
+  return toUpperCase.join(" ");
 };
 
 document.write(`<ol>`);
