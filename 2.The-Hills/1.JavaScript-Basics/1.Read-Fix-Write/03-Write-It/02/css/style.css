@@ -23,6 +23,10 @@ h1 {
   font-size: 3rem;
 }
 
+ol {
+  list-style-type: decimal;
+}
+
 li{
   font-size:2rem;
   padding:.5rem 0;
